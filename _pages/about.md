@@ -16,7 +16,7 @@ I currently study how deep neural networks can be used to make human-like models
 
 About
 ------
-Outside of lab, I like to split my free time between guitar, music production, and Brazilian Jiu Jitsu (give it a try if you haven't).
+Outside of lab, I like to split my free time between guitar, music production, and Brazilian jiu-jitsu (give it a try if you haven't).
 
 Contact
 ------
