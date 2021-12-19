@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Ian Griffith"
+title                    : "Ian Griffith's Homepage"
 title_separator          : "-"
-name                     : &name "Ian Griffith's Homepage"
+name                     : &name "Ian Griffith"
 description              : &description "PhD Candidate studying Deep Learning and Sound Perception "
 url                      : https://ianmgriff.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -79,7 +79,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Ian Griffith"
+  name             : "Ian M. Griffith"
   avatar           : "profile.png"
   bio              : "sounds, brains, deep learning, music"
   location         : "Cambridge, MA"
