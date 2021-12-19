@@ -10,7 +10,7 @@ I am a PhD student in the [Harvard-MIT Program in Speech and Hearing Biosciences
 ### Research
 I'm broadly interested in how the human brain translates sounds into perception, and creating artificial systems that can do the same. I'm also interested in using computational models of perception to improve hearing assistive devices and other audio technologies.
 
-I currently study how deep neural networks can be used to make human-like models of speech recognition. While seemingly simple, speech recognition is a surprisingly difficult computational task. How the human brain solves this task is still not fully understood.
+I'm currently thinking about how deep neural networks can be used to make human-like models of speech recognition. While seemingly simple, speech recognition is a surprisingly difficult computational task, and it's not fully known how the human brain solves this.
 
 ### About
 
