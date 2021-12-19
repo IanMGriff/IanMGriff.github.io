@@ -8,7 +8,7 @@ redirect_from:
 I am a PhD student in the [Harvard-MIT Program in Speech and Hearing Biosciences and Technology](https://shbtphd.hms.harvard.edu/). I am currently working with Josh McDermott in the [Labratory for Computational Audition](http://mcdermottlab.mit.edu/index.html). Previously, I was a research assistant with [Liberty Hamilton](https://slhs.utexas.edu/research/hamilton-lab), and recieved my undergraduate degree in Cognitive Science from UC Berkeley.
 
 ### Research
-I'm broadly interested in how the human brain translates sounds into perception, and creating artificial systems that can do the same. I'm also interested in using computational models of perception to improve hearing assistive devices and other audio technologies.
+I'm broadly interested in how the human brain translates sounds into perception and creating artificial systems that can do the same. I'm also interested in using computational models of perception to improve hearing assistive devices and other audio technologies.
 
 I'm currently thinking about how deep neural networks can be used to make human-like models of speech recognition. Though naturally effortless for most, speech recognition is a surprisingly difficult computational task and it's not fully known how the human brain solves it.
 
