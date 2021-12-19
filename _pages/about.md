@@ -18,7 +18,8 @@ Outside of lab, I like to split my free time between guitar, music production, a
 
 ### Contact
 
-If you'd like to reach out, please email me! 
+If you'd like to reach out, please email me!    
+
 iangriffith[at]g[dot]harvard[dot]edu
 
 I'm more than happy to talk about the (non-linear) path to grad school, general science, and all things sound and hearing.
