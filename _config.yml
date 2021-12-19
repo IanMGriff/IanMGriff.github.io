@@ -7,8 +7,8 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : #"Ian Griffith"
-title_separator          : #"-"
+title                    : "Ian Griffith"
+title_separator          : "-"
 name                     : &name "Ian Griffith"
 description              : &description "PhD Candidate studying Deep Learning and Sound Perception "
 url                      : https://ianmgriff.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
