@@ -11,4 +11,4 @@ I'm Ian, an AI researcher and Computational Neuroscientist at Meta building huma
 I'm broadly interested in studying minds and machines to better understand the principles of intelligence, with the aim of improving machines. 
 
 #### Auditory attention & "the cocktail party problem"
-Human brains can selectively focus on a single voice amid background noises and other talkers, a capacity that has been difficult to reproduce in artificial systems. In our upcoming article in [Nature Human Behavior](https://doi.org/10.1101/2025.05.28.656682), we examine whether human-like auditory attention can emerge in artificial models equipped with biologically inspired attention mechanisms when trained for the cocktail party problem.
+Human brains can selectively focus on a single voice amid background noises and other talkers, a capacity that has been difficult to reproduce in artificial systems. In our upcoming [Nature Human Behavior](https://doi.org/10.1101/2025.05.28.656682) paper, we examine whether human-like auditory attention can emerge in artificial models equipped with biologically inspired attention mechanisms when trained for the cocktail party problem.
