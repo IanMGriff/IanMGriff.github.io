@@ -12,6 +12,6 @@ I'm broadly interested in studying minds and machines to better understand the p
 
 ### Auditory attention & "the cocktail party problem"
 
-![Figure 1](/images/figure_1.svg)
+![Figure 1](/images/figure_1.png)
 
 Human brains can selectively focus on a single voice amid background noises and other talkers, a capacity that has been difficult to reproduce in artificial systems. In our upcoming [Nature Human Behavior](https://doi.org/10.1101/2025.05.28.656682) paper, we examine how human-like auditory attention can emerge in artificial models if they are equipped with biologically-inspired attention mechanisms and trained for the cocktail party problem.
