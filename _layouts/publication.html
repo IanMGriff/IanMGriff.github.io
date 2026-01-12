@@ -1,0 +1,101 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+<div id="main" role="main" class="publication-page">
+  <article class="publication" itemscope itemtype="http://schema.org/ScholarlyArticle">
+    
+    <header class="publication__header">
+      <h1 class="publication__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+      
+      <div class="publication__meta">
+        {% if page.date %}
+          <div class="publication__meta-item">
+            <span class="publication__meta-label">Date</span>
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%d %b %Y" }}</time>
+          </div>
+        {% endif %}
+        
+        {% if page.venue %}
+          <div class="publication__meta-item">
+            <span class="publication__meta-label">Publication</span>
+            <span itemprop="publisher">{{ page.venue }}</span>
+          </div>
+        {% endif %}
+        
+        {% if page.authors %}
+          <div class="publication__meta-item">
+            <span class="publication__meta-label">Authors</span>
+            <div class="publication__authors" itemprop="author">
+              {% for author in page.authors %}
+                <span class="publication__author">{{ author }}{% unless forloop.last %}, {% endunless %}</span>
+              {% endfor %}
+            </div>
+          </div>
+        {% elsif site.author.name %}
+          <div class="publication__meta-item">
+            <span class="publication__meta-label">Authors</span>
+            <span class="publication__authors" itemprop="author">{{ site.author.name }}</span>
+          </div>
+        {% endif %}
+        
+        {% if page.topics %}
+          <div class="publication__meta-item">
+            <span class="publication__meta-label">Topics</span>
+            <div class="publication__topics">
+              {% for topic in page.topics %}
+                <span class="publication__topic">{{ topic }}{% unless forloop.last %}, {% endunless %}</span>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </header>
+
+    {% if page.excerpt %}
+      <section class="publication__abstract">
+        <h2 class="publication__section-title">Abstract</h2>
+        <div class="publication__abstract-content" itemprop="description">
+          {{ page.excerpt | markdownify }}
+        </div>
+      </section>
+    {% endif %}
+
+    <section class="publication__content" itemprop="text">
+      {{ content }}
+    </section>
+
+    {% if page.paperurl %}
+      <div class="publication__actions">
+        <a href="{{ page.paperurl }}" class="btn btn--primary" target="_blank">Access Paper</a>
+      </div>
+    {% endif %}
+
+    {% if page.citation %}
+      <section class="publication__citation">
+        <h2 class="publication__section-title">Citation</h2>
+        <p class="publication__citation-text">{{ page.citation }}</p>
+      </section>
+    {% endif %}
+
+    {% if page.share %}{% include social-share.html %}{% endif %}
+
+    {% if page.related %}
+      <section class="publication__related">
+        <h2 class="publication__section-title">Related</h2>
+        <div class="publication__related-list">
+          {% comment %}Related publications would go here{% endcomment %}
+        </div>
+      </section>
+    {% endif %}
+
+  </article>
+</div>

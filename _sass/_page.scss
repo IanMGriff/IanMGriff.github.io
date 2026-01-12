@@ -5,14 +5,14 @@
 #main {
   @include container;
   @include clearfix;
-  margin-top: 3em;
+  margin-top: 2em;
   padding-left: 2em;
   padding-right: 2em;
   animation: intro 0.3s both;
   animation-delay: 0.35s;
 
   @include breakpoint($x-large) {
-    max-width: $x-large;
+    max-width: 1200px;
     padding-left: 3em;
     padding-right: 3em;
   }
@@ -23,6 +23,7 @@
     @include span(10 of 12 last);
     @include prefix(0.5 of 12);
     @include suffix(2 of 12);
+    max-width: 900px;
   }
 
   .page__inner-wrap {
@@ -38,11 +39,65 @@
 
 .page__title {
   margin-top: 0;
-  line-height: 1;
+  margin-bottom: 1em;
+  line-height: 1.2;
+  font-size: $type-size-1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: $dark-gray;
 
-  & + .page__meta {
-    margin-top: -0.5em;
+  @include breakpoint($medium) {
+    font-size: 2.5em;
   }
+}
+
+.page__header {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 2px solid $border-color;
+}
+
+.page__meta-publication {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em 3em;
+  margin-top: 1.5em;
+}
+
+.page__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.page__meta-label {
+  font-size: $type-size-6;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $gray;
+}
+
+.page__section-title {
+  margin: 2em 0 1em 0;
+  font-size: $type-size-3;
+  font-weight: 600;
+  color: $dark-gray;
+}
+
+.page__citation {
+  margin: 2em 0;
+  padding: 2em;
+  background-color: $code-background-color;
+  border-left: 4px solid $ibm-blue;
+}
+
+.page__citation-text {
+  margin: 0;
+  font-size: $type-size-6;
+  line-height: 1.6;
+  font-style: italic;
+  color: $text-color;
 }
 
 .page__lead {
