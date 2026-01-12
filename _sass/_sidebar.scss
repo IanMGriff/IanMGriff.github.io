@@ -226,12 +226,14 @@
     padding-right: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
-    color: inherit;
+    color: $gray;
     font-size: $type-size-5;
     text-decoration: none;
+    transition: color 0.2s ease;
 
     &:hover {
-      text-decoration: underline;
+      color: $ibm-blue;
+      text-decoration: none;
     }
   }
 }
