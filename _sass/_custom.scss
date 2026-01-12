@@ -3,6 +3,21 @@
    Optional extras for even more polish
    ============================================ */
 
+/* === REMOVE BORDER FROM EMPTY PAGE HEADER === */
+/* Remove border when header doesn't contain a title (for pages like about) */
+.page__header:not(:has(.page__title)) {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Fallback for browsers without :has() support - target home page specifically */
+.page[itemscope] .page__header:empty {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 /* === SMOOTH PAGE TRANSITIONS === */
 .page {
   animation: fadeIn 0.5s ease-in;
