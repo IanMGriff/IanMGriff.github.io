@@ -44,27 +44,32 @@ $type-size-8                : 0.625em;  // ~10px
 
 
 /*
-   Colors
+   Colors - IBM Design System
    ========================================================================== */
 
-$gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
-$lighter-gray               : mix(#fff, $gray, 90%);
+$gray                       : #525252;
+$dark-gray                  : #161616;
+$darker-gray                : #000000;
+$light-gray                 : #8d8d8d;
+$lighter-gray               : #e0e0e0;
 
-$body-color                 : #fff;
-$background-color           : #fff;
-$code-background-color      : #fafafa;
+$body-color                 : #ffffff;
+$background-color           : #ffffff;
+$code-background-color      : #f4f4f4;
 $code-background-color-dark : $light-gray;
 $text-color                 : $dark-gray;
-$border-color               : $lighter-gray;
+$border-color               : #e0e0e0;
 
-$primary-color              : #7a8288;
-$success-color              : #62c462;
-$warning-color              : #f89406;
-$danger-color               : #ee5f5b;
-$info-color                 : #52adc8;
+/* IBM Blue - Primary brand color */
+$ibm-blue                   : #0f62fe;
+$ibm-blue-dark              : #002d9c;
+$ibm-blue-light             : #4589ff;
+
+$primary-color              : $ibm-blue;
+$success-color              : #24a148;
+$warning-color              : #f1c21b;
+$danger-color               : #da1e28;
+$info-color                 : $ibm-blue;
 
 /* brands */
 $behance-color              : #1769FF;
