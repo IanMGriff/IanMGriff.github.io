@@ -81,7 +81,9 @@ analytics:
 author:
   name             : ""
   avatar           : "lab_pic1.jpg"
-  bio              : "PhD @ Harvard-MIT\nMeta Reality Labs" 
+  bio              : |
+    PhD @ Harvard-MIT
+    AI/ML @ Meta Reality Labs 
   location         : "Cambridge, MA"
   employer         :  
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
