@@ -79,14 +79,14 @@ analytics:
 
 # Site Author
 author:
-  name             : "Ian Griffith"
+  name             : ""
   avatar           : "lab_pic1.jpg"
-  bio              : ""
+  bio              : "PhD @ Harvard-MIT | AI Researcher @ Meta Reality Labs"
   location         : "Cambridge, MA"
   employer         :  
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : # "http://yourfullgooglescholarurl.com"
-  email            : "iangriffith@g.harvard.edu"
+  email            : # "iangriffith@g.harvard.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
