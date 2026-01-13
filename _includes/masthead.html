@@ -2,22 +2,49 @@
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title | default: site.name }}</a></li>
+    <div class="masthead__header">
+      <div class="masthead__photo">
+        {% if site.author.avatar %}
+          <img src="{{ base_path }}/images/{{ site.author.avatar }}" alt="{{ site.author.name | default: site.title }}">
+        {% endif %}
+      </div>
+      <div class="masthead__info">
+        <h1 class="masthead__name">{{ site.author.name | default: site.title }}</h1>
+        {% if site.author.bio %}
+          <p class="masthead__bio">{{ site.author.bio }}</p>
+        {% endif %}
+        {% if site.author.location %}
+          <p class="masthead__location">{{ site.author.location }}</p>
+        {% endif %}
+        <div class="masthead__links">
+          {% if site.author.email %}
+            <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+          {% endif %}
+          {% if site.author.googlescholar %}
+            <a href="{{ site.author.googlescholar }}">Google Scholar</a>
+          {% endif %}
+        </div>
+        <div class="masthead__buttons">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
-              {% else %}
+            {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            {% assign is_pdf = link.url | downcase | split:'.' | last %}
+            {% assign link_title_lower = link.title | downcase %}
+            {% if link_title_lower == 'resume' or link_title_lower == 'cv' %}
+              <a class="nav-button" href="{{ domain }}{{ link.url }}" {% if is_pdf == 'pdf' %}download{% endif %}>{{ link.title }}</a>
+            {% endif %}
           {% endfor %}
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
+          {% if site.author.github %}
+            <a class="nav-button" href="https://github.com/{{ site.author.github }}">GitHub</a>
+          {% endif %}
+          {% if site.author.linkedin %}
+            <a class="nav-button" href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>
+          {% endif %}
+        </div>
+      </div>
     </div>
   </div>
 </div>

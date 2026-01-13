@@ -14,14 +14,37 @@
     {% endif %}
   </div>
 
-  <div class="author__content">
+  {% unless page.url == "/" or page.url == "/index.html" %}
     <h3 class="author__name">{{ author.name }}</h3>
+  {% endunless %}
+
+  <div class="author__content">
     {% if author.bio %}<p class="author__bio">{{ author.bio | newline_to_br }}</p>{% endif %}
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
+    <div class="author__buttons">
+      {% for link in site.data.navigation.main %}
+        {% if link.url contains 'http' %}
+          {% assign domain = '' %}
+        {% else %}
+          {% assign domain = base_path %}
+        {% endif %}
+        {% assign is_pdf = link.url | downcase | split:'.' | last %}
+        {% assign link_title_lower = link.title | downcase %}
+        {% if link_title_lower == 'resume' or link_title_lower == 'cv' %}
+          <a class="author__button" href="{{ domain }}{{ link.url }}" {% if is_pdf == 'pdf' %}download{% endif %}>{{ link.title }}</a>
+        {% endif %}
+      {% endfor %}
+      {% if author.linkedin %}
+        <a class="author__button" href="https://www.linkedin.com/in/{{ author.linkedin }}">LinkedIn</a>
+      {% endif %}
+      {% if author.github %}
+        <a class="author__button" href="https://github.com/{{ author.github }}">GitHub</a>
+      {% endif %}
+    </div>
+    <button class="btn btn--inverse" style="display: none;">Follow</button>
+    <ul class="author__urls social-icons" style="display: none;">
       {% if author.location %}
         <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</li>
       {% endif %}

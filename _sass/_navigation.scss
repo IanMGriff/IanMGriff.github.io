@@ -274,6 +274,34 @@
                 transform: scaleX(1); /* reveal*/
       }
     }
+
+    // Button style for Resume and CV (like Isomorphic Labs "Our Team" buttons)
+    .masthead__menu-item--button {
+      padding-left: 0.75rem;
+      
+      .nav-button {
+        display: inline-block;
+        padding: 0.5rem 1.25rem;
+        margin: 0;
+        border: 1px solid $dark-gray;
+        border-radius: 8px; // Start as soft rectangle
+        background: transparent;
+        color: $dark-gray;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        text-decoration: none;
+        transition: border-radius 0.7s ease;
+        
+        &:before {
+          display: none; // Remove underline animation
+        }
+        
+        &:hover {
+          border-radius: 999px; // Become oval/pill-shaped on hover
+          // Keep same colors - no color change
+        }
+      }
+    }
   }
 
   .hidden-links {

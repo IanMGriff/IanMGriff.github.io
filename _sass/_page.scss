@@ -39,8 +39,8 @@
 
 .page__title {
   margin-top: 0;
-  margin-bottom: 1em;
-  line-height: 1.2;
+  margin-bottom: 0em;
+  line-height: 1;
   font-size: $type-size-1;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -53,8 +53,8 @@
 
 .page__header {
   margin-bottom: 2em;
-  padding-bottom: 1.5em;
-  border-bottom: 2px solid $border-color;
+  padding-bottom: 1em;
+  border-bottom: none;
 }
 
 .page__meta-publication {
@@ -109,13 +109,14 @@
 
   h2 {
     padding-bottom: 0.75em;
-    margin-bottom: 1em;
-    border-bottom: 2px solid $border-color;
+    margin-bottom: 0em;
+    border-bottom: none;
   }
 
   h3 {
     margin-top: 2em;
     margin-bottom: 0.75em;
+    text-align: center;
   }
 
   p, li, dl {

@@ -3,6 +3,7 @@
    ========================================================================== */
 
 .masthead {
+  display: none; // Hide masthead entirely
   position: relative;
   border-bottom: 1px solid $border-color;
   background-color: $background-color;
@@ -15,44 +16,169 @@
   &__inner-wrap {
     @include container;
     @include clearfix;
-    padding: 1.5em 2em;
+    padding: 2em 2em;
     font-family: $sans-serif-narrow;
 
     @include breakpoint($x-large) {
       max-width: 1200px;
-      padding: 1.5em 3em;
+      padding: 2em 3em;
+    }
+  }
+
+  &__header {
+    display: block;
+
+    @include breakpoint($medium) {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+  }
+
+  &__photo {
+    display: block;
+    margin-bottom: 1.5em;
+    text-align: center;
+
+    @include breakpoint($medium) {
+      display: table-cell;
+      vertical-align: top;
+      width: 175px;
+      padding-right: 2em;
+      margin-bottom: 0;
+      text-align: left;
     }
 
-    nav {
-      z-index: 10;
+    img {
+      width: 100%;
+      max-width: 175px;
+      height: auto;
+      aspect-ratio: 3 / 4; // Vertical cropping - taller aspect ratio
+      object-fit: cover; // Crop to fit the aspect ratio
+      border-radius: 4px;
+      border: 1px solid #000; // Thin black outline
+      display: block;
+      margin: 0 auto;
+
+      @include breakpoint($medium) {
+        margin: 0;
+        max-width: 175px;
+      }
     }
+  }
+
+  &__info {
+    display: block;
+
+    @include breakpoint($medium) {
+      display: table-cell;
+      vertical-align: top;
+      width: auto;
+    }
+  }
+
+  &__name {
+    margin: 0 0 0.5em 0;
+    font-size: 1.75em;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: $dark-gray;
+    line-height: 1.2;
+
+    @include breakpoint($medium) {
+      font-size: 2em;
+    }
+  }
+
+  &__bio {
+    margin: 0.5em 0;
+    font-size: $type-size-5;
+    line-height: 1.6;
+    color: $text-color;
+  }
+
+  &__location {
+    margin: 0.25em 0;
+    font-size: $type-size-6;
+    color: $gray;
+  }
+
+  &__buttons {
+    margin-top: 1em;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 60px; // Half the previous width (was ~120px)
+
+    .nav-button {
+      display: block;
+      padding: 0.26rem 0.45rem; // 75% of height (0.35 * 0.75 = 0.26), half of width (0.9 * 0.5 = 0.45)
+      margin: 0;
+      border: 1px solid $dark-gray;
+      border-bottom: none;
+      border-radius: 0;
+      background: $background-color;
+      color: $dark-gray;
+      font-size: $type-size-6; // Match location font size
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      text-align: center;
+      text-shadow: none;
+      transition: border-radius 0.7s ease;
+      
+      // Add bottom border for last button
+      &:last-child {
+        border-bottom: 1px solid $dark-gray;
+      }
+      
+      &:hover {
+        border-radius: 999px; // Become oval/pill-shaped on hover
+      }
+    }
+  }
+
+  &__links {
+    margin: 1em 0;
+    font-size: $type-size-6;
 
     a {
+      display: inline-block;
+      margin-right: 1.5em;
+      color: $link-color;
       text-decoration: none;
-      font-weight: 500;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $link-color-hover;
+      }
     }
   }
-}
 
-.masthead__menu {
+  &__buttons {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 200px;
 
-  ul {
-    margin: 0;
-    padding: 0;
-    clear: both;
-    list-style-type: none;
-  }
-}
-
-.masthead__menu-item {
-  display: block;
-  list-style-type: none;
-  white-space: nowrap;
-
-  &--lg {
-    padding-right: 2em;
-    font-weight: 600;
-    font-size: 1.125em;
-    letter-spacing: -0.01em;
+    .nav-button {
+      display: block;
+      padding: 0.5rem 1.25rem;
+      margin: 0;
+      border: 1px solid $dark-gray;
+      border-radius: 8px; // Start as soft rectangle
+      background: transparent;
+      color: $dark-gray;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      text-align: center;
+      transition: border-radius 0.7s ease;
+      
+      &:hover {
+        border-radius: 999px; // Become oval/pill-shaped on hover
+      }
+    }
   }
 }

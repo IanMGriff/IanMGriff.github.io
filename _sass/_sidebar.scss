@@ -70,55 +70,38 @@
    ========================================================================== */
 
 .author__avatar {
-  display: table-cell;
-  vertical-align: top;
-  width: 36px;
-  // set width only, for non-square avatars
-  // height: 36px;
-
-  @include breakpoint($large) {
-    display: block;
-    width: auto;
-    height: auto;
-  }
+  display: block;
+  width: auto;
+  margin-bottom: 1em;
 
   img {
     max-width: 175px;
-    border-radius: 50%;
-
-    @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid $border-color;
-    }
+    width: 175px;
+    height: auto;
+    aspect-ratio: 3 / 4; // Vertical cropping - taller aspect ratio
+    object-fit: cover; // Crop to fit the aspect ratio
+    border-radius: 8px; // Soft rectangle
+    border: 1px solid #000; // Thin black outline
+    display: block;
   }
 }
 
 .author__content {
-  display: table-cell;
-  vertical-align: top;
-  padding-left: 15px;
-  padding-right: 25px;
-  line-height: 1;
-
-  @include breakpoint($large) {
-    display: block;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
+  display: none; // Hide the content section - name will be under avatar
 }
 
 .author__name {
-  margin: 0;
-
-  @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+  margin: 0.75em 0 1em 0;
+  font-family: $sans-serif;
+  font-size: $type-size-4;
+  font-weight: 600;
+  color: $dark-gray;
 }
+
 .sidebar .author__name {
   font-family: $sans-serif;
-  font-size: $type-size-5;
+  font-size: $type-size-4;
+  font-weight: 600;
 }
 
 .author__bio {
@@ -234,6 +217,42 @@
     &:hover {
       color: $ibm-blue;
       text-decoration: none;
+    }
+  }
+}
+
+.author__buttons {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: -0.5rem; // Add spacing between buttons
+  max-width: 108px; // 80% wider (60px * 1.8)
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+
+  .author__button {
+    display: block;
+    padding: 0.26rem 0.81rem; // 80% wider horizontal padding (0.45rem * 1.8)
+    margin: 0;
+    border: 1px solid $dark-gray;
+    border-radius: 8px; // Always have rounded corners
+    background: $background-color;
+    color: $dark-gray;
+    font-size: $type-size-6;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: none;
+    transition: border-radius 0.7s ease;
+    position: relative;
+    z-index: 1;
+    
+    &:hover {
+      border-radius: 999px; // Become oval/pill-shaped on hover
+      z-index: 1; // Keep same z-index on hover
     }
   }
 }

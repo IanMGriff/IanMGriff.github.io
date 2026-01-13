@@ -1,5 +1,6 @@
 ---
 permalink: /
+title: "Ian M. Griffith"
 author_profile: true
 redirect_from: 
   - /about/
@@ -9,6 +10,7 @@ I'm Ian, an AI researcher and Computational Neuroscientist at Meta Reality Labs 
 
 ## Research
 I'm broadly interested in studying minds and machines to better understand the principles of intelligence, to improve artificial systems and better understand humans. 
+
 
 ### Auditory attention & "the cocktail party problem"
 
