@@ -12,8 +12,15 @@ I'm Ian, an AI researcher and Computational Neuroscientist at Meta Reality Labs 
 I'm broadly interested in studying minds and machines to better understand the principles of intelligence, to improve artificial systems and better understand humans. 
 
 
-### Auditory attention & "the cocktail party problem"
+### Attention mechanisms & "the cocktail party problem"
 
-![Figure 1](/images/figure_1.png)
+![attention model](/images/figure_1.png)
 
-Human brains can selectively focus on a single voice amid background noises and other talkers, a capacity that has been difficult to reproduce in artificial systems. In our upcoming [Nature Human Behavior (in press)](https://doi.org/10.1101/2025.05.28.656682) paper, we examine how human-like auditory attention can emerge in artificial models if they are equipped with biologically-inspired attention mechanisms and trained for the cocktail party problem.
+Selective attention has historically been challenging for AI. In our upcoming [Nature Human Behavior (in press)](https://doi.org/10.1101/2025.05.28.656682) paper, we show that neural networks with biologically-inspired attention mechanisms can develop human-like selective attention, using the cocktail party problem as a proving ground. We used these models to predict two novel human behaviors. We also showed that relaxing biological grounding hurt performance, providing some evidence that biological constraints can improve representation learning.
+
+### Modeling music perception
+
+![pitch model](/images/figure_2.png)
+
+Do models trained for music transcription or generation learn human-like features of pitch perception? Early results suggest that relative pitch is an important constraint but not the whole picture. Stay tuned!
+
