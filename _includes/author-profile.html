@@ -33,7 +33,7 @@
         {% assign is_pdf = link.url | downcase | split:'.' | last %}
         {% assign link_title_lower = link.title | downcase %}
         {% if link_title_lower == 'resume' or link_title_lower == 'cv' %}
-          <a class="author__button" href="{{ domain }}{{ link.url }}" {% if is_pdf == 'pdf' %}download{% endif %}>{{ link.title }}</a>
+          <a class="author__button" href="{{ domain }}{{ link.url }}" target="_blank">{{ link.title }}</a>
         {% endif %}
       {% endfor %}
       {% if author.linkedin %}
