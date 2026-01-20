@@ -16,7 +16,7 @@ I'm broadly interested in studying minds and machines to better understand the p
 
 ![attention model](/images/figure_1.png)
 
-Selective attention has historically been challenging for AI. In our [recent preprint](https://doi.org/10.1101/2025.05.28.656682) paper, we show that neural networks with biologically-inspired attention mechanisms can develop human-like selective attention, using the cocktail party problem as a proving ground. We used these models to predict two novel human behaviors. We also showed that relaxing biological grounding hurt performance, providing some evidence that biological constraints can improve representation learning.
+Selective attention has historically been challenging for AI. In our [recent preprint](https://doi.org/10.1101/2025.05.28.656682), we show that neural networks with biologically-inspired attention mechanisms can develop human-like selective attention, using the cocktail party problem as a proving ground. We used these models to predict two novel human behaviors. We also showed that relaxing biological grounding hurt performance, providing some evidence that biological constraints can improve representation learning.
 
 ### Modeling music perception
 
