@@ -42,6 +42,11 @@
       {% if author.github %}
         <a class="author__button" href="https://github.com/{{ author.github }}">GitHub</a>
       {% endif %}
+      {% if page.url == "/press/" %}
+        <a class="author__button" href="{{ base_path }}/">Home</a>
+      {% else %}
+        <a class="author__button" href="{{ base_path }}/press/">Press</a>
+      {% endif %}
     </div>
     <button class="btn btn--inverse" style="display: none;">Follow</button>
     <ul class="author__urls social-icons" style="display: none;">

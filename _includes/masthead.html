@@ -43,6 +43,11 @@
           {% if site.author.linkedin %}
             <a class="nav-button" href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>
           {% endif %}
+          {% if page.url == "/press/" %}
+            <a class="nav-button" href="{{ base_path }}/">Home</a>
+          {% else %}
+            <a class="nav-button" href="{{ base_path }}/press/">Press</a>
+          {% endif %}
         </div>
       </div>
     </div>

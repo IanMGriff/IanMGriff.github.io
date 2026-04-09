@@ -3,16 +3,13 @@
    Optional extras for even more polish
    ============================================ */
 
-/* === REMOVE BORDER FROM EMPTY PAGE HEADER === */
-/* Remove border when header doesn't contain a title (for pages like about) */
-.page__header:not(:has(.page__title)) {
-  border-bottom: none;
-  padding-bottom: 0;
-  margin-bottom: 0;
+/* === HIDE EMPTY PAGE HEADER === */
+.page__title:empty,
+.page__header:not(:has(.page__title:not(:empty))) {
+  display: none;
 }
 
-/* Fallback for browsers without :has() support - target home page specifically */
-.page[itemscope] .page__header:empty {
+.page__header {
   border-bottom: none;
   padding-bottom: 0;
   margin-bottom: 0;
@@ -108,7 +105,7 @@
 }
 
 /* === ENHANCED LINK UNDERLINES === */
-.page__content a:not(.btn) {
+.page__content a:not(.btn):not(.profile-button) {
   background-image: linear-gradient(transparent calc(100% - 2px), var(--color-accent) 2px);
   background-repeat: no-repeat;
   background-size: 0% 100%;
@@ -116,7 +113,7 @@
   text-decoration: none;
 }
 
-.page__content a:not(.btn):hover {
+.page__content a:not(.btn):not(.profile-button):hover {
   background-size: 100% 100%;
 }
 
@@ -417,6 +414,145 @@
   line-height: 1.6;
   margin-bottom: var(--space-md);
 }
+
+/* === BORDERLESS RESEARCH TABLE === */
+.page__content table {
+  border: none;
+  box-shadow: none;
+  table-layout: fixed;
+}
+
+.page__content table thead {
+  display: none;
+}
+
+.page__content table td,
+.page__content table th {
+  border: none;
+  background: transparent;
+  vertical-align: top;
+  padding: 0.75em 0.5em;
+}
+
+.page__content table td:first-child {
+  width: 35%;
+}
+
+.page__content table td:first-child img {
+  width: 100%;
+  height: auto;
+}
+
+.page__content table td:last-child {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.page__content table td:last-child strong {
+  font-size: 1.05rem;
+}
+
+.page__content table tr {
+  border: none;
+  background: transparent;
+}
+
+/* === NEWS LIST STYLE === */
+.page__content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.page__content ul li {
+  white-space: normal;
+  margin-bottom: 0.3em;
+}
+
+/* === FULL WIDTH CENTERED LAYOUT === */
+.page {
+  float: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* === SITE HEADER BLOCK === */
+.site-header-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5em;
+  margin-bottom: 1.5em;
+  justify-content: center;
+}
+
+.site-photo {
+  width: 160px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 8px;
+  border: 1px solid #000;
+  flex-shrink: 0;
+}
+
+.site-header-info {
+  padding-top: 0.25em;
+}
+
+.site-header-info h1.site-name {
+  margin: 0 0 0.2em 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.site-header-info p {
+  margin: 0.15em 0;
+  font-size: 0.95rem;
+  color: $dark-gray;
+}
+
+.site-buttons {
+  margin-top: 0.75em;
+  display: flex;
+  gap: 0;
+}
+
+.page__content .site-button,
+.page__content .site-button:hover {
+  display: block;
+  padding: 0.26rem 0.81rem;
+  margin: 0 0 0 -1px;
+  border: 1px solid $dark-gray;
+  border-radius: 8px;
+  background: $background-color !important;
+  background-image: none !important;
+  background-size: 0 !important;
+  color: $dark-gray;
+  font-size: $type-size-6;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-decoration: none !important;
+  text-align: center;
+  text-shadow: none;
+  transition: border-radius 0.05s ease;
+}
+
+.page__content .site-button:first-child {
+  margin-left: 0;
+}
+
+.page__content .site-button:hover {
+  border-radius: 999px;
+}
+
+/* === SECTION HEADERS === */
+.page__content h3 {
+  border-bottom: none;
+  padding-bottom: 0.3em;
+  margin-top: 1.5em;
+}
+
 
 /* === PRINT STYLES === */
 @media print {
