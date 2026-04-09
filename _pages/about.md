@@ -41,5 +41,5 @@ I'm broadly interested in studying minds and machines to better understand the p
 
 | | |
 |---|---|
-| [![attention model](/images/figure_1.png)](https://doi.org/10.1038/s41562-026-02414-7) | **Optimized feature gains explain and predict successes and failures of human selective listening** <br> Ian M. Griffith, R. Preston Hess & Josh H. McDermott <br> *Nature Human Behaviour*, 2026. <br> [[Paper (web)](https://doi.org/10.1038/s41562-026-02414-7)] [[Paper (pdf)](https://mcdermottlab.mit.edu/papers/Griffith_Hess_McDermott_2026_deep_attention.pdf)] [[Code](https://github.com/IanMGriff/auditory_attention)] |
+| ![attention model](/images/figure_1.png) | **Optimized feature gains explain and predict successes and failures of human selective listening** <br> Ian M. Griffith, R. Preston Hess & Josh H. McDermott <br> *Nature Human Behaviour*, 2026. <br> [[Paper (web)](https://doi.org/10.1038/s41562-026-02414-7)] [[Paper (pdf)](https://mcdermottlab.mit.edu/papers/Griffith_Hess_McDermott_2026_deep_attention.pdf)] [[Code](https://github.com/IanMGriff/auditory_attention)] |
 | ![pitch model](/images/figure_2.jpg) | **Task-optimized models of relative pitch** <br> Ian M. Griffith\*, Malinda J. McPherson\*, Mark Saddler\*, Josh H. McDermott <br> *Association for Research in Otolaryngology*, Orlando, FL, 2023. |
