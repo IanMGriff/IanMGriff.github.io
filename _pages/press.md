@@ -1,6 +1,6 @@
 ---
 permalink: /press/
-title: "Press"
+title: ""
 author_profile: false
 ---
 
@@ -20,6 +20,6 @@ author_profile: false
   </div>
 </div>
 
-Media coverage of things I've worked on:
-
+### Press
 - [**How the brain handles the "cocktail party problem"**](https://news.mit.edu/2026/how-brain-handles-cocktail-party-problem-0313) -- MIT News, Anne Trafton, March 13, 2026
+- [**2022-2023 Amelia Peabody Scholarship**](https://shbtphd.hms.harvard.edu/news/2022-2023-amelia-peabody-scholarship) -- Harvard SHBT, June 15, 2022
